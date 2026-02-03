@@ -1,0 +1,24 @@
+# =============================================================================
+# Runtime Dependencies - Required for Demo
+# =============================================================================
+# These packages are needed to run the interactive demo (demo.py)
+
+# Database connectivity
+psycopg[binary]>=3.1.0        # PostgreSQL adapter with binary wheels
+
+# Environment management
+python-dotenv>=1.0.0          # Load .env configuration
+
+# Terminal UI
+rich>=13.0.0                  # Beautiful terminal output with tables and panels
+
+# Embedding generation (required for interactive query input)
+sentence-transformers>=2.2.0  # Generate embeddings for user queries
+torch>=2.0.0                  # Required by sentence-transformers
+
+# =============================================================================
+# Note: The demo generates embeddings on-the-fly for user queries
+# =============================================================================
+# The dataset (150 documents) has pre-computed embeddings stored in the database.
+# However, the demo needs to generate embeddings for YOUR queries in real-time,
+# which requires the sentence-transformers library.
